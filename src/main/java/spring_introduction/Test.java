@@ -16,10 +16,23 @@ public class Test {
         System.out.println(myCat.getName());
         System.out.println(yourCat.getName());
 
-//      System.out.println("переменные ссылаются на один и тот же объект?\n" + (myCat==yourCat ));
-//      System.out.println(myCat);
-//      System.out.println(yourCat);
+        System.out.println("переменные ссылаются на один и тот же объект?\n" + (myCat==yourCat ));
+        System.out.println(myCat);
+        System.out.println(yourCat + "\n");
+
+        Dog myDog = context.getBean("dog", Dog.class);
+        myDog.setName("Belka");
+        Dog yourDog = context.getBean("dog", Dog.class);
+        yourDog.setName("Strelka");
+
+        System.out.println(myDog.getName());
+        System.out.println(yourDog.getName());
+
+        System.out.println("переменные ссылаются на один и тот же объект?\n" + (myDog==yourDog));
+        System.out.println(myDog);
+        System.out.println(yourDog);
 
         context.close();
+
     }
 }
