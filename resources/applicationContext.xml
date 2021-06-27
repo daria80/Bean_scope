@@ -8,7 +8,9 @@
     <bean id="cat" class="spring_introduction.Cat" scope="singleton"></bean>
     <bean id="dog" class="spring_introduction.Dog"
     init-method="init"
-    destroy-method="destroy">
+    destroy-method="destroy"
+    scope="prototype">
+
     </bean>
 
 </beans>
